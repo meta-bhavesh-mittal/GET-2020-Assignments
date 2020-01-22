@@ -12,7 +12,11 @@ public final class Poly
 		this.cofficient = cofficient;
 	}
 
-
+	/**
+	 * This method is used to evaluate the expression for some particular value.
+	 * @param varValue
+	 * @return it returns the answer in float value.
+	 */
 	public float evalauate(float varValue)
 	{
 		float evaluateResult = 0;
@@ -23,7 +27,10 @@ public final class Poly
 		return evaluateResult;
 	}
 
-
+	/**
+	 * This method is used to calculate degrre.
+	 * @return
+	 */
 	public int degree()
 	{
 		int maxDegree = 0;
@@ -31,67 +38,137 @@ public final class Poly
 		return power[power.length-1];
 	}
 
-
-	public static Poly addPoly(Poly p1, Poly p2)
+	
+	/**
+	 * This method is used to calculate the addition of two polynomial.
+	 * @param p1
+	 * @param p2
+	 * @return it returns the poly class object.
+	 */
+	public static Poly addPoly(Poly p1 , Poly p2)
 	{
-		int [] powerArray = new int[Math.max(p1.power.length , p2.power.length)];
-		int [] coffArray = new int[Math.max(p1.cofficient.length , p2.cofficient.length)];
-		int index = -1;
-		int index1 = -1;
-		for ( int i = 0; i < p1.power.length; i++)
+		int count = 0;
+		for( int  i = 0 ; i < p1.power.length ; i++)
 		{
-			for(int j = 0; j < p2.power.length; j++)
+			for( int  j = 0 ; j < p2.power.length ; j++)
 			{
 				if(p1.power[i] == p2.power[j])
 				{
-					coffArray[++index] = p1.cofficient[i] + p2.cofficient[j];
-					powerArray[++index1] = p1.power[i];
-					p1.cofficient[i] = -1;
-					p2.cofficient[j] = -1;
-					p1.power[i] = -1;
+					count++;
 					break;
 				}
 			}
 		}
-		for ( int i = 0; i < p1.power.length; i++)
+		int size  = p1.power.length + p2.power.length - count;
+		int [] powerArray = new int[size];
+		int [] coffArray = new int[size];
+		for(int i = 0; i < p1.power.length-1 ; i++ )
 		{
-			if(p1.cofficient[i] != -1)
+			for(int j = i+1; j < p1.power.length ; j++ )
 			{
-				coffArray[++index] = p1.cofficient[i];
+				if(p1.power[i] > p1.power[j])
+				{
+					int temp;
+					temp = p1.power[i];
+					p1.power[i] = p1.power[j];
+					p1.power[j]= temp;
+					int temp1;
+					temp1 = p1.cofficient[i];
+					p1.cofficient[i] = p1.cofficient[j];
+					p1.cofficient[j] = temp1;
+				}
+			}
+		}
+		for(int i = 0; i < p2.power.length-1 ; i++ )
+		{
+			for(int j = i+1; j < p2.power.length ; j++ )
+			{
+				if(p2.power[i] > p2.power[j])
+				{
+					int temp;
+					temp = p2.power[i];
+					p2.power[i] = p2.power[j];
+					p2.power[j]= temp;
+					int temp1;
+					temp1 = p2.cofficient[i];
+					p2.cofficient[i] = p2.cofficient[j];
+					p2.cofficient[j] = temp1;
+				}
+			}
+		}
+		int index = -1;
+		int index1 = -1;
+		int i=0,j=0,count_i=0,count_j=0;
+		while(i<p1.power.length && j<p2.power.length){
+			if(p1.power[i]==p2.power[j]){
 				powerArray[++index] = p1.power[i];
+				coffArray[++index1] = p1.cofficient[i]+p2.cofficient[j];
+				i++;
+				j++;
+				count_i++;
+				count_j++;
+				
 			}
-		}
-		for ( int i = 0; i < p2.power.length; i++)
-		{
-			if(p2.cofficient[i] != -1)
-			{
-				coffArray[++index] = p2.cofficient[i];
-				powerArray[++index] = p2.power[i];
-			}
-		}
-		Poly obj = new Poly(powerArray , coffArray);
-		return obj;
-	}
+			else if(p1.power[i]<p2.power[j]){
+				System.out.println(p1.power[i]+"<"+p2.power[j]);
 
-	public static void main(String[] args) 
+				powerArray[++index] = p1.power[i];
+				coffArray[++index1] = p1.cofficient[i];
+				i++;
+				count_i++;
+			}
+			else{
+				System.out.println(p1.power[i]+">"+p2.power[j]);
+
+				powerArray[++index] = p2.power[j];
+				coffArray[++index1] = p2.cofficient[j];
+				j++;
+				count_j++;
+			}
+		
+		}
+		
+		System.out.println("count"+count);
+
+			for(int t=count_i;t<p1.power.length;t++){
+				powerArray[++index] = p1.power[t];
+				coffArray[++index1] = p1.cofficient[t];
+			}
+		
+		
+		
+			for(int t=count_j;t<p2.power.length;t++){
+				powerArray[++index] = p2.power[t];
+				coffArray[++index1] = p2.cofficient[t];
+			}
+				for(i= 0; i< powerArray.length; i++)
+		{
+			System.out.println(powerArray[i]+"="+coffArray[i]);
+			
+		}
+				return new Poly(powerArray,coffArray);
+	}
+	
+	
+	/**
+	 * This method is used to return the cofficient array.
+	 * @return it returns an array.
+	 */
+	public int[] getCofficient()
 	{
-		Poly obj = new Poly(new int[]{2,1,0} , new int[]{2,1,5});
-		Poly obj1 = new Poly(new int[]{2,1,0} , new int[]{5,7,2});
-		float answer = obj.evalauate((float) 1.2);
-		System.out.println(answer);
-		int degree = obj.degree();
-		System.out.println(degree);
-		Poly obj3 = addPoly(obj , obj1);
-		System.out.println("length "+ obj3.power.length);
-		for( int i = 0; i < obj3.cofficient.length ; i++)
-		{
-			System.out.println(obj3.power[i]);
-		}
-		for( int i = 0; i < obj3.cofficient.length ; i++)
-		{
-			System.out.println(obj3.cofficient[i]);
-		}
 
+		return cofficient;
 	}
+	
+	/**
+	 * This method is used to return the power array.
+	 * @return it returns an array.
+	 */
+	public int[] getExponent()
+	{
+
+		return power;
+	}
+	
 
 }
