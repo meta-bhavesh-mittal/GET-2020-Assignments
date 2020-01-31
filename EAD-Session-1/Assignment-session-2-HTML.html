@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Metacube Parking System</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="index.js">
+    </script>
+</head>
+
+
+<body>
+    <h1 id="h1">Metacube Parking System</h1>
+    <div>
+        <form id="empRegisterForm">
+            <fieldset>
+                <legend><b>Employee Registration Form</b></legend>
+                <span id="msg"></span><br>
+                <label>Employee Full Name: <br><input type="text" placeholder="Name" id="name" required></label><br><br>
+                <label>Gender:<br>
+                <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female</label><br><br>
+                <label>Employee Email Id:<br> <input type="email" placeholder="email" id="email"></label><br><br>
+                <label>Password: <br><input type="password" placeholder="password" id="password"></label><br><br>
+                <label>Confirm Password: <input type="password" placeholder="confirm password" id="rePassword"></label><br><br>
+                <label>Employee Contact: <input type="text" placeholder="contact" id="mobile"></label><br><br>
+                <input type="button" onclick="checkValidation()" value="Next">
+            </fieldset>
+        </form>
+    </div>
+    <br><br>
+    <form id="vehicleReg">
+        <fieldset>
+            <legend><b>Vehicle Registration Form</b></legend>
+
+            <label>Vehicle Name:</label><br>
+            <input type="text" placeholder="Vehicle Name"><br><br>
+            <label>Vehicle Type:</label><br>
+
+            <select name="Vehicle" id="vehicletype">
+                <option disabled selected>Type</option>
+            <option value="cycle">Cycle</option>
+            <option value="motorCycle">Motor Cycle</option>
+            <option value="fourWheelers">Four Wheeler</option>
+            </select>
+            <br><br>
+
+            <label>Vehicle Number: <br><input type="text" placeholder="Vehicle Number" id="vehicleNumber"></label><br><br>
+            <label>Employee ID:<br> <input type="text" id="EmployeeId" placeholder="employeeId" readonly></label><br><br>
+
+            <label for="textarea">Identification: </label><br>
+            <textarea name="identification" id="textarea" cols="20" rows="5"></textarea>
+            <br><br>
+            <input type="button" onclick="vechileRegestration()" value="Next">
+        </fieldset>
+    </form><br>
+    <div id="a2">
+        <div id="a1">
+
+
+            <div id="passCycle">
+                <fieldset>
+                    <legend><b>Select Pass</b></legend>
+                    <h1>Cycle</h1>
+
+                    <select id="amount0" onchange="changeCurrency()">
+                    <option disabled selected>Change Currency</option>
+                    <option value="USD0">USD</option>
+                    <option value="INR0">INR</option>
+                    <option value="YEN0">YEN</option>
+                </select>
+
+                    <br><br>
+
+                    <div class="flex-container">
+
+                        <div class="card">
+
+                            <h1>1 Day</h1>
+                            <p id="dailyprice">Choose Currency</p>
+                            <p><button class="cardButton" value="Make Pass" onclick="makePassDaily()">Make Pass</button></p>
+                        </div>
+                        <div class="card">
+
+                            <h1>1 Month</h1>
+                            <p id="monthlyprice">Choose Currency</p>
+                            <p><button class="cardButton" value="Make Pass" onclick="makePassMonthly()">Make Pass</button></p>
+                        </div>
+                        <div class="card">
+
+                            <h1>1 Year</h1>
+                            <p id="yearlyprice">Choose Currency</p>
+                            <p><button class="cardButton" value="Make Pass" onclick="makePassYearly()">Make Pass</button></p>
+                        </div>
+                    </div>
+                </fieldset>
+            </div><br>
+
+
+            <div id="passMotorCycle">
+                <fieldset>
+                    <legend><b>Select Pass</b></legend>
+                    <h1>Motorbike</h1>
+
+                    <select id="amount1" onchange="changeCurrency1()">
+                    <option disabled selected>Change Currency</option>
+                    <option value="USD1">USD</option>
+                    <option value="INR1">INR</option>
+                    <option value="YEN1">YEN</option>
+                </select>
+                    <br><br>
+                    <div class="flex-container">
+                        <div class="card">
+
+                            <h1>1 Day</h1>
+                            <p id="dailyprice1">Choose Currency</p>
+                            <p><button class="cardButton" value="Make Pass" onClick="makePassDaily()">Make Pass</button></p>
+                        </div>
+                        <div class="card">
+
+                            <h1>1 Month</h1>
+                            <p id="monthlyprice1">Choose Currency</p>
+                            <p><button class="cardButton" value="Make Pass" onClick="makePassMonthly()">Make Pass</button></p>
+                        </div>
+                        <div class="card">
+
+                            <h1>1 Year</h1>
+                            <p id="yearlyprice1">Choose Currency</p>
+                            <p><button class="cardButton" value="Make Pass" onClick="makePassYearly()">Make Pass</button></p>
+                        </div>
+                    </div>
+                </fieldset>
+            </div><br>
+
+
+
+            <div id="passFourWheeler">
+                <fieldset>
+                    <legend><b>Select Pass</b></legend>
+                    <h1>Four Wheeler</h1>
+
+                    <select id="amount2" onchange="changeCurrency2()">
+                    <option disabled selected>Change Currency</option>
+                    <option value="USD2">USD</option>
+                    <option value="INR2">INR</option>
+                    <option value="YEN2">YEN</option>
+                </select>
+                    <br><br>
+                    <div class="flex-container">
+                        <div class="card">
+
+                            <h1>1 Day</h1>
+                            <p id="dailyprice2">Choose Currency</p>
+                            <p><button class="cardButton" value="Make Pass" onClick="makePassDaily()">Make Pass</button></p>
+                        </div>
+                        <div class="card">
+
+                            <h1>1 Month</h1>
+                            <p id="monthlyprice2">Choose Currency</p>
+                            <p><button class="cardButton" value="Make Pass" onClick="makePassMonthly()">Make Pass</button></p>
+                        </div>
+                        <div class="card">
+
+                            <h1>1 Year</h1>
+                            <p id="yearlyprice2">Choose Currency</p>
+                            <p><button class="cardButton" value="Make Pass" onClick="makePassYearly()">Make Pass</button></p>
+                        </div>
+                    </div>
+                </fieldset>
+            </div><br>
+        </div>
+        <fieldset>
+            <legend><b>Payable Amount</b></legend>
+            <h1 id="recipt"> NO Bill Amount</h1>
+        </fieldset>
+
+    </div>
+</body>
+
+
+
+</html>
