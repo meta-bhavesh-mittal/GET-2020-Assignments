@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <servlet>
+    <servlet-name>abc</servlet-name>
+    <servlet-class>com.student.AddStudent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>abc</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+ 
+  
+   <servlet>
+    <servlet-name>pqr</servlet-name>
+    <servlet-class>com.student.ShowStudent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>pqr</servlet-name>
+    <url-pattern>/showall</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>xyz</servlet-name>
+    <servlet-class>com.student.UpdateStudent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>xyz</servlet-name>
+    <url-pattern>/update</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>mnq</servlet-name>
+    <servlet-class>com.student.SearchStudent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>mnq</servlet-name>
+    <url-pattern>/search</url-pattern>
+  </servlet-mapping>
+</web-app>
