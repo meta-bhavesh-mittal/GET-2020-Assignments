@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<a href="login.html" >  <button class="btn btn-primary" style="position: absolute;left: 90%;top:10%;">Login</button> </a>
+<!-- 
+<form action="show">
+<button class="btn btn-primary" style="position: absolute;left: 83%;top:10%;">Show All</button><br>
+</form>-->
+<br>
+<div class="login">
+	<h1>METACUBE PARKING SYSTEM</h1>
+	<form action="employeeRegister" method="post">
+	
+		<fieldset>
+			<legend><b> Employee Registration Form </b></legend>
+			<input type="text" name="fname" placeholder="Full Name" required="required" />
+			<label>Male</label><input type="radio" name="gender" value="male" />
+            <label>Female</label><input type="radio" name="gender" value="female" />
+           	<input type="email" name="email" placeholder="Email Id" required="required" />
+	    	<input type="password" name="password" placeholder="Password" required="required" />
+	    	<input type="password" name="confirmpassword" placeholder="Confirm Password" required="required" />
+	    	<input type="text" name="contact" placeholder="Contact" required="required" />
+	    	<select name="company">
+  					<option value="ATCS">ATCS</option>
+  					<option value="METACUBE">METACUBE</option>
+  					<option value="INTIMETECH">INTIMETECH</option>
+ 					<option value="INFOSYS">INFOSYS</option>
+			</select><br>
+	        <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>            
+		</fieldset>
+	</form>
+	</div><br><br><br>
+</body>
+</html>
