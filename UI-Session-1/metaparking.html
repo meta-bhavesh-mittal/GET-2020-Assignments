@@ -1,0 +1,173 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaParking</title>
+    <style>
+        #showpricing {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 2px solid black;
+            padding: 20px;
+        }
+        
+        .inlineBlock {
+            display: inline-block;
+            border: 1px solid black;
+            margin: 40px;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="maindiv">
+        <nav>
+            <a href="#maindiv">MetaParking</a>
+            <a href="">Add Employees</a>
+            <a href="">Add Vehicle</a>
+            <a href="">Feedback</a>
+            <a href="">Pricing</a>
+
+        </nav>
+    </div>
+
+    <div id="home">
+        <img src="https://picsum.photos/1300/400" alt="Image is not Available Sorry!">
+    </div>
+
+    <div id="empdiv">
+
+        <form id="empReg">
+            <fieldset>
+
+                <legend>Employee Registration Form </legend>
+
+                <label> Name <input id="empname" type="text" name="Name" placeholder="Name" required ></label>
+
+                <label>Gender   <input type="radio" name="Gender" required >Male
+                                <input type="radio" name="Gender" required >Female
+                </label>
+
+                <label>Email  <input type="email" name="Email" placeholder="Email Id" id="emailid" required></label>
+
+                <label> Password  <input type="password" placeholder="Password" id="pswd" required ></label>
+
+                <label> Confirm Password  <input type="password" placeholder="Confirm Password" id="confirmpswd" required ></label>
+
+                <label> Contact Number  <input type="tel" placeholder="Contact Number" id="contact" required ></label>
+
+                <input type="submit" value="Next">
+
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="vehiclediv">
+        <form id="vehicleReg">
+            <fieldset>
+                <legend>Vehicle Registration Form</legend>
+
+                <label>Vehicle Company <input type="text" placeholder="Vehicle Company"></label>
+
+                <label>Vehicle Model <input type="text" placeholder="Vehicle Model"></label>
+
+                <label>Vehicle Type
+                    <select name="Vehicle" id="vehicletype">
+                        <option disabled selected>Type</option>
+                        <option value="cycle">Cycle</option>
+                        <option value="motorCycle">Motor Cycle</option>
+                        <option value="fourWheelers">Four Wheeler</option>
+                    </select>
+                </label>
+
+                <label>Vehicle Number <input type="text" placeholder="Vehicle Number" id="vehiclenumber"></label>
+
+                <label>Employee ID <input type="text" id="Employeeid" placeholder="employeeId" readonly></label>
+
+                <label for="textarea">Identification <textarea name="identification" id="textarea" cols="20" rows="5"></textarea></label>
+
+                <input type="button" value="Next">
+
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="feedbackdiv">
+        <form id="feedbackReg">
+            <fieldset>
+                <legend>Feedback Form</legend>
+                <label>Email  <input type="email" name="Email" placeholder="Email Id" id="email" required></label>
+
+                <label for="textarea">Feedback <textarea name="feedback" id="textarea" cols="20" rows="5"></textarea></label>
+
+                <input type="button" value="Next">\
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="passdiv">
+        <fieldset>
+            <legend>Pass</legend>
+
+            <div class="inlineblock">
+                <div>
+                    <h1>Cycle</h1>
+                    <div id="showPricing">
+                        <p>$100</p>
+                        <span>/month</span>
+                    </div>
+                </div>
+                <div>
+                    <p><a>$5 Daily</a></p>
+                    <p><a>$100 Monthly</a></p>
+                    <p><a>$500 Yearly</a></p>
+                </div>
+                <div>
+                    <input type="submit" value="Purchase Now">
+                </div>
+            </div>
+
+            <div class="inlineblock">
+                <div>
+                    <h1>Cycle</h1>
+                    <div id="showPricing">
+                        <p>$100</p>
+                        <span>/month</span>
+                    </div>
+                </div>
+                <div>
+                    <p><a>$5 Daily</a></p>
+                    <p><a>$100 Monthly</a></p>
+                    <p><a>$500 Yearly</a></p>
+                </div>
+                <div>
+                    <input type="submit" value="Purchase Now">
+                </div>
+            </div>
+
+            <div class="inlineblock">
+                <div>
+                    <h1>Cycle</h1>
+                    <div id="showPricing">
+                        <p>$100</p>
+                        <span>/month</span>
+                    </div>
+                </div>
+                <div>
+                    <p><a>$5 Daily</a></p>
+                    <p><a>$100 Monthly</a></p>
+                    <p><a>$500 Yearly</a></p>
+                </div>
+                <div>
+                    <input type="submit" value="Purchase Now">
+                </div>
+            </div>
+
+        </fieldset>
+    </div>
+</body>
+
+</html>
