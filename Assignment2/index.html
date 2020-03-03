@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Metacube Parking System</title>
+</head>
+
+<body>
+
+    <!-- This is the code for navigation bar-->
+    <div class="navBar">
+        <h1 id="navHeading">Metacube Parking System</h1>
+    
+    </div> 
+
+    <!--This is used to show image-->
+    <div id="imageDiv">
+    <div id="home">
+        <img src="car1.jpg">
+    </div>
+    </div>
+    <details id="addEmployee" class="navItem">
+        <summary>Add Employee</summary>
+    <div  >
+        <h1>Employee Details</h1>
+        <form>
+            <div class="formItem">
+                
+                    <input type="text"  name="empName" placeholder="Employee Name" required>
+            </div>
+            <div class="formItem">
+                    <label><input type="radio" name="gender" value="male" required>Male</label>
+                    
+            </div>
+            <div class="formItem">
+                <label><input type="radio" name="gender" value="female" required>Female</label>
+                
+        </div>
+
+            <div class="formItem">
+                
+                    <input type="email" name="empEmail" placeholder="Employee Email Id" required>
+            </div>
+            <div class="formItem">
+                    
+                        <input type="password" name="password" placeholder="Password" required>
+            </div>            
+            <div class="formItem">
+                
+                    <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <div class="formItem">
+               
+                    <input type="text" name="contactNo" placeholder="Contact Number" size="10" minlength="10" required>
+            </div>    
+            <div class="formItem">
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+    
+    </div>
+</details>
+    <!--This is use to add the vehicle details-->
+    <details id="addEmployee" class="navItem">
+        <summary>Add Vehicle</summary>
+    <div id="addVehicle">
+        <h1>Vehicle Details</h1>
+        <form>
+            <div class="formItem">
+                
+                    <input type="text" name="vehicleName" placeholder="Vehicle Name" required>
+            </div>
+            <div class="formItem">
+                
+                    <input type="text" name="vehicleModel" placeholder="Vehicle Model" required>
+            </div>
+            <div class="formItem">
+                    <select id="type">
+                        <option value="none" selected disabled hidden>select option</option>
+                        <option value="cycle">Cycle</option>
+                        <option value="motorCycle">Motor Cycle</option>
+                        <option value="fourWheeler">Four Wheeler</option>
+                    </select>
+            </div>
+            <div class="formItem">
+                    <input type="text" name="vehicleNumber" placeholder="Vehicle Number" required>
+            </div>           
+            <div class="formItem">
+                    <input type="text" name="empIdVehicle" placeholder="Employee Id" required>
+            </div>
+            <div class="formItem"> 
+                <p>Identification</p>
+                    <textarea name="message" rows="10" cols="30"></textarea>            
+            </div>    
+            <div class="formItem">
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+    </div>
+    </details>
+
+    <!--This is use to give feedback form-->
+    <details id="addEmployee" class="navItem">
+        <summary>Feedback Form</summary>
+    <div id="giveFeedback">
+        <h1>Feedback Form</h1>
+        <div class="formItem">
+            <input type="text" name="empNameFeedback" placeholder="Enter Name">
+        </div>
+        <div class="formItem">
+            <input type="email" name="emailIdFeedback" placeholder="Enter Email">
+        </div>
+        <div class="formItem">
+            <input type="text" name="subject" placeholder="Subject">
+        </div>
+        <div class="formItem">
+            <textarea name="messageFeedback" rows="10" cols="30"></textarea>
+        </div>
+        <div class="formItem">
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+    </details>
+
+
+    <!--This is use to show the price of pass-->
+    <details id="addEmployee" class="navItem">
+        <summary>Pricing</summary>
+<div id="mainPricing">
+    <div class="pricing">
+        <div>
+            <h1>Cycle</h1>
+            <div id="showPricing">
+            <p >$100</p>
+                <span>/month</span>
+            </div>
+        </div>
+        <div id="selectPrice">
+            <p><a style="color: black;">$5 Daily</a></p>
+            <p><a style="color: black;">$100 monthly</a></p>
+            <p><a style="color: black;">$500 Yearly</a></p>
+        </div>
+        <div class="formItem">
+            <input type="submit" value="PURCHASE">
+        </div>
+    </div>
+    </div>
+</div>
+</details>
+</body>
+</html>

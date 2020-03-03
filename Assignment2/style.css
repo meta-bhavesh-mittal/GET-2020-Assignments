@@ -1,0 +1,104 @@
+.navBar{
+    background-color: #29FAC2;
+    color:white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-style: Georgia;
+    font-weight: bold;
+    border-radius: 30px;
+    }
+    #navHeading{
+        width: max-content;
+    }
+    #navList{
+        list-style-type: none;
+      
+    }
+    .navItem{
+        background-color: rgb(231, 250, 245);
+        color: black;
+        margin: 10px;
+        border-radius: 20px;
+        padding: 15px;
+        text-align: center;
+        
+    }
+    .navItem a{
+        color: white;
+        text-decoration: none;
+        font-weight:bolder;
+        font-size: larger;
+        letter-spacing: 2px;
+    }
+    .home{
+        margin: 20px;
+    }
+    #addEmployee{
+        /* height: 600px; */
+        border: 1px solid black;
+        width: 400px;
+        
+    }
+    #addEmployee h1{
+        text-align: center;
+    }
+    .formItem{
+        display:flex;
+        justify-content: center; 
+        margin: 10px;
+    }
+    .formItem input[type="text"] ,input[type="password"],input[type="email"]{
+        border-radius: 20px;
+        border-color: black;
+        background-color: #dafffc;
+        height: 26px;
+        width: 300px;
+        color: white;
+    }
+    .formItem input[type="submit"]{
+        border-radius: 30px;
+        color: white;
+        background-color: teal;
+        padding: 15px;
+        width: 100px;
+        border: 1px solid turquoise;
+    }
+
+    
+    .pricing{
+
+        display:inline-block;
+        border: 1px solid black;
+        width: 300px;
+        margin: 20px;
+    }
+    
+    #showPricing{
+        margin: 20;
+        border:1px solid black;
+        width: 80px;
+        height: 80px;
+        border-radius:100%;
+        display: inline-block;
+        }
+   
+    #type{
+        border-radius: 20px;
+        border-color: black;
+        background-color: #dafffc;
+        height: 26px;
+        width: 250px;
+        color: black;
+        border: 1px solid black;
+    }
+    #imageDiv{
+        margin-top:10px;
+        margin-left: 20px;
+    }
+    #home img{
+        width: 95%;
+        height: 500px;
+        margin-top:10px;
+        margin-left: 10px;
+    }
