@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- This is for navigation bar-->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Metacube Parking</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Personal Details <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Vechile Details</a>
+                    <a class="nav-item nav-link" href="#">Pass Details</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- This is for employee details -->
+        <form id="employeeForm">
+            <div class="my-5">
+                <h1>Employee Details</h1>
+            </div>
+            <div class="form-group" id="nameForm">
+                <div class="my-3">
+                    <span id="message" style="color: red;"></span>
+                </div>
+                <label>Enter Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                <input type="button" class="btn btn-primary my-3" value="Next" onclick="nameForm()">
+            </div>
+            <div class="form-group" id="emailForm" style="display: none;">
+                <h3 class="messageEmail my-2"></h3>
+                <div class="my-3">
+                    <span id="message1" style="color: red;"></span>
+                </div>
+                <label>Enter Email Id</label>
+                <input type="email" id="email" class="form-control">
+                <input type="button" class="btn btn-primary my-3" value="Next" onclick="emailForm()">
+            </div>
+            <div id="genderForm" style="display: none;">
+                <h3 class="messageEmail my-2"></h3>
+                <label>Enter Your Gender</label>
+                <div class="radio">
+                    <label><input type="radio" id="gender" name="Gender" value="Male" checked>Male</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" id="gender" name="Gender" value="Female" >Female</label>
+                </div>
+                <input type="button" class="btn btn-primary my-3" value="Next" onclick="genderForm()">
+            </div>
+            <div id="passwordForm" style="display: none;">
+                <h3 class="messageEmail my-2"></h3>
+                <div>
+                    <span id="passwordMessage" style="color:red;"></span>
+                </div>
+                <label>Enter Password</label>
+                <input type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock" onkeyup="passwordChecker(this.value)">
+                <label>Confirm Password</label>
+                <input type="password" id="confPassword" class="form-control" aria-describedby="passwordHelpBlock">
+                <input type="button" class="btn btn-primary my-3" value="Next" onclick="passwordForm()">
+            </div>
+            <div class="form-group" id="contactForm" style="display: none;">
+                <h3 class="messageEmail my-2"></h3>
+                <div>
+                    <span id="message3" style="color:red;"></span>
+                </div>
+                <label>Enter Contact Number</label>
+                <input type="text" class="form-control" id="contact" placeholder="Enter contact number">
+                <input type="button" class="btn btn-primary my-3" value="Next" onclick="contactForm()">
+            </div>
+        </form>
+        <!-- This is for vechile details-->
+        <form id="vechileForm" style="display: none;">
+            <div class="my-5">
+                <h1>Vechile Details</h1>
+            </div>
+            <div class="form-group" id="vechileNameForm">
+                <label>Enter Vechile Name</label>
+                <input type="text" class="form-control" id="vechileName" placeholder="Enter Vechile" required>
+                <input type="button" class="btn btn-primary my-3" value="Next" onclick="vechileNameForm()">
+            </div>
+            <div class="form-group" id="vechileTypeForm" style="display: none;">
+                <label>Enter Vechile Type</label>
+                <select id="vechileType" class="form-control" required>
+                    <option selected>Choose Vechile</option>
+                    <option>Cycle</option>
+                    <option>MotorCycle</option>
+                    <option>Four Wheeler</option>
+                  </select>
+                <input type="button" class="btn btn-primary my-3" value="Next" onclick="vechileTypeForm()">
+            </div>
+            <div class="form-group" id="vechileNumberForm" style="display: none;">
+                <label>Enter Vechile Number</label>
+                <input type="text" class="form-control" id="vechileNumber" placeholder="Enter Vechile Number" required>
+                <input type="button" class="btn btn-primary my-3" value="Next" onclick="vechileNumberForm()">
+            </div>
+            <div class="form-group" id="empIdForm" style="display: none;">
+                <label>Enter Employee Id</label>
+                <input type="text" class="form-control" id="empId" placeholder="Enter Employee Id" required>
+                <input type="button" class="btn btn-primary my-3" value="Next" onclick="empIdForm()">
+            </div>
+            <div class="form-group" id="vechileSummaryForm" style="display: none;">
+                <label>Enter Vechile Summary</label>
+                <textarea class="form-control" rows="5" id="vechileSummary" required></textarea>
+                <input type="button" class="btn btn-primary my-3" value="Next" onclick="vechileSummaryForm()">
+            </div>
+
+        </form>
+
+        <!--This is used to generate pass-->
+        <div id="passForm" class=" my-5" style="display: none;">
+            <div class="row">
+                <div class="card d-flex justify-content-center" style="width:25rem;">
+                    <div style="width:100%">
+                        <img class="card-img-top" src="" alt="Card image cap" id="image">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center" id="cardTitle"></h5>
+                        <div class="d-flex justify-content-center my-3">
+                            <select class="priceType" id="priceType" class="form-control" onchange="converter()">
+                            <option value="type" style = "color:rgb(134, 134, 134);" selected disabled>Currency</option>
+                            <option value="inr">INR</option>
+                            <option value="yen">YEN</option>
+                            <option value="usd">USD</option>
+                          </select>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div class="col-md-4">
+                                <div><span>1 DAY</span></div>
+                                <div>
+                                    <span id="showCardPriceDaily"></span>
+                                </div>
+                                <div class="my-3">
+                                    <input type="button" class="btn btn-primary" value="Pass" onclick="showpass1()">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div><span>1 MONTH</span></div>
+                                <div>
+                                    <span id="showCardPriceMonthly"></span>
+                                </div>
+                                <div class="my-3">
+                                    <input type="button" class="btn btn-primary" value="Pass" onclick="showpass2()">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div><span>1 YEAR</span></div>
+                                <div>
+                                    <span id="showCardPriceYearly"></span>
+                                </div>
+                                <div class="my-3">
+                                    <input type="button" class="btn btn-primary" value="Pass" onclick="showpass3()">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This is used to show bill-->
+        <div id="result" style="display: none;">
+            <h3 id="displayCardPrice"></h3>
+        </div>
+    </div>
+</body>
+
+</html>
