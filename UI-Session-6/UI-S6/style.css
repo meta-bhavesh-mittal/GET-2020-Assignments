@@ -1,0 +1,111 @@
+* {
+    text-decoration: none;
+    /* border: 1px solid black; */
+}
+
+body {
+    background-color: lavender !important;
+}
+
+.text-size {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sidebar {
+    background-color: white;
+}
+
+.collapse {
+    font-size: 14px;
+}
+
+.list-group-item.active {
+    background-color: #004eff24!important;
+    border: none;
+}
+
+.hover-color:hover {
+    color: rgb(88, 51, 255)!important;
+}
+
+.top-bar {
+    background-color: royalblue;
+}
+
+.search-box input {
+    background: rgb(109, 123, 235);
+    border-radius: 1.5rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[placeholder] {
+    color: white !important;
+}
+
+.profile-image {
+    height: 25px;
+}
+
+.page-title-option {
+    background-color: #dbe6ff!important;
+}
+
+.twitter {
+    background-color: rgb(64, 164, 241) !important;
+    height: 211px;
+}
+
+.facebook {
+    background-color: rgb(91, 107, 232) !important;
+    height: 211px;
+}
+
+#lineChartContainer {
+    height: 411px;
+    width: 100%;
+}
+
+#donutChartContainer {
+    height: 370px;
+    width: 100%;
+}
+
+.media-image {
+    height: 55px;
+}
+
+.notification-icon-badge {
+    position: absolute;
+    top: -8;
+    right: 10;
+}
+
+.area-chart {
+    height: 445px;
+}
+
+.progress-bar-container {
+    height: 8px !important;
+}
+
+a,
+a:active,
+a:link {
+    text-decoration: none;
+}
+
+.aHover:hover {
+    color: #5B6BE8 !important;
+}
+
+.footer {
+    background-color: rgb(233, 237, 248);
+}
+
+.container-icon {
+    background-color: lavender;
+}
