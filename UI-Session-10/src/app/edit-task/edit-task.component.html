@@ -1,0 +1,30 @@
+<div id="editTaskForm">
+    <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+        <input type="text" class="fortextbox" name="taskTitle" placeholder="Task Title" formControlName="taskName">
+        <br />
+
+        <input type="text" class="fortextbox" name="taskDescription" placeholder="Task Description"
+            formControlName="taskDescription">
+        <br />
+
+        <select formControlName="taskPriority" name="Priority" class="fortextbox">
+            <option value="" disabled selected>Select Task Priority</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select> <br /><br>
+
+        <select formControlName="taskStatus" name="Status" class="fortextbox">
+            <option value="" disabled selected>Select Task Status</option>
+            <option value="NEW">NEW</option>
+            <option value="IN PROGRESS">IN PROGRESS</option>
+            <option value="COMPLETED">COMPLETED</option>
+        </select> <br /><br>
+
+        <span>Task Creation Date: {{creationDate}}</span><br>
+
+        <span>Task Completion Date: {{completionDate}}</span><br>
+
+        <input type="submit" [disabled]="!formdata.valid" class="forsubmit" value="Edit">
+    </form>
+</div>
