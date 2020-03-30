@@ -1,0 +1,46 @@
+#newTaskDiv {
+    background-color: grey;
+    margin-left: 5%;
+}
+#inProcessTaskDiv {
+    background-color:grey;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+#completedTaskDiv {
+    background-color: grey;
+    margin-right: 5%;
+}
+
+#bottom {
+    display: inline-block;
+    width: 100%;
+    
+}
+
+.divs{
+    padding-top: 1%;
+    float: left;
+    text-align: center;
+    width: 28%;
+    height: 500px;
+}
+
+#taskDiv {
+    margin-top: 10%;
+    background: rgb(95, 95, 247);
+    
+}
+a {
+    color: black
+  }
+
+#High {
+    background-color: red;
+}
+#Low {
+    background-color:orange;
+}
+#Medium {
+    background-color: blue;
+}
